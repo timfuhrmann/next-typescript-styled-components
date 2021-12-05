@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": [
       "dom",
@@ -17,7 +18,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "@css/*": ["app/css/*"],
+      "@mixin/*": ["app/css/mixin/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
