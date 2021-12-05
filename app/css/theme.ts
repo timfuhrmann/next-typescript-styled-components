@@ -6,10 +6,10 @@ export const theme = {
 
     //region Breakpoints
     bp: {
-        m: "screen and (min-width: 768px)",
-        l: "screen and (min-width: 1024px)",
-        xl: "screen and (min-width: 1340px)",
-        xxl: "screen and (min-width: 2000px)",
+        m: 768,
+        l: 1024,
+        xl: 1340,
+        xxl: 2000,
     },
     //endregion
 };
