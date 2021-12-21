@@ -21,15 +21,26 @@ export const fillParent = () => css`
     width: 100%;
 `;
 
+const centerAbsolute = () => css`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+`;
+
 export const transition = (
     properties: string,
     durations: string,
     timingFunctions: string = "ease",
     delays: string = "0s"
 ) => css`
-      transition-property: ${properties.split(" ").join(",")};
-      transition-duration: ${durations.split(" ").join(",")};
-      transition-timing-function: ${timingFunctions.split(" ").join(",")};
-      transition-delay: ${delays.split(" ").join(",")};
-      will-change: ${properties.split(" ").join(",")};
+    transition-property: ${properties.split(" ").join(",")};
+    transition-duration: ${durations.split(" ").join(",")};
+    transition-timing-function: ${timingFunctions.split(" ").join(",")};
+    transition-delay: ${delays.split(" ").join(",")};
+    will-change: ${properties.split(" ").join(",")};
+    
+    @media screen and (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
 `;
