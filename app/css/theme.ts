@@ -14,11 +14,14 @@ export const theme = {
     //endregion
 
     //region Breakpoints
+    contentWidth: "125rem",
+
     bp: {
+        s: 524,
         m: 768,
         l: 1024,
-        xl: 1340,
-        xxl: 2000,
+        xl: 1250,
+        xxl: 1440,
     },
     //endregion
 };
