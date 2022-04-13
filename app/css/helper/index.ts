@@ -13,7 +13,7 @@ export const square = (value: string) => css`
     width: ${value};
 `;
 
-export const fillParent = () => css`
+export const fillParent = css`
     position: absolute;
     top: 0;
     left: 0;
@@ -21,7 +21,7 @@ export const fillParent = () => css`
     width: 100%;
 `;
 
-const centerAbsolute = () => css`
+const centerAbsolute = css`
     position: absolute;
     top: 50%;
     left: 50%;
@@ -39,8 +39,16 @@ export const transition = (
     transition-timing-function: ${timingFunctions.split(" ").join(",")};
     transition-delay: ${delays.split(" ").join(",")};
     will-change: ${properties.split(" ").join(",")};
-    
+
     @media screen and (prefers-reduced-motion: reduce) {
         transition: none;
+    }
+`;
+
+export const hover = (literals: TemplateStringsArray, ...placeholders: any[]) => css`
+    @media (hover: hover) {
+        &:hover {
+            ${css(literals, ...placeholders)};
+        }
     }
 `;

@@ -1,27 +1,37 @@
 export const theme = {
     //region Color
-    gray50: "#080808",
-    gray75: "#1A1A1A",
-    gray100: "#1E1E1E",
-    gray200: "#2C2C2C",
-    gray300: "#393939",
-    gray400: "#494949",
-    gray500: "#5C5C5C",
-    gray600: "#7C7C7C",
-    gray700: "#A2A2A2",
-    gray800: "#C8C8C8",
-    gray900: "#EFEFEF",
+    gray50: "#ffffff",
+    gray75: "#fafafa",
+    gray100: "#f5f5f5",
+    gray200: "#eaeaea",
+    gray300: "#e1e1e1",
+    gray400: "#cacaca",
+    gray500: "#b3b3b3",
+    gray600: "#8e8e8e",
+    gray700: "#6e6e6e",
+    gray800: "#4b4b4b",
+    gray900: "#2c2c2c",
     //endregion
 
     //region Breakpoints
-    contentWidth: "125rem",
-
     bp: {
-        s: 524,
-        m: 768,
-        l: 1024,
-        xl: 1250,
-        xxl: 1440,
+        intrinsic: 0,
+        s: 524, // phone
+        m: 768, // tablet
+        l: 1024, // small laptop
+        xl: 1250, // laptop
+        xxl: 1440, // desktop
+    },
+    //endregion
+
+    //region Content Width
+    contentWidth: {
+        intrinsic: "calc(100vw - 3.2rem)",
+        s: "calc(100vw - 3.2rem)",
+        m: "calc(100vw - 12rem)",
+        l: "calc(100vw - 12rem)",
+        xl: "calc(100vw - 19rem)",
+        xxl: "125rem",
     },
     //endregion
 };
