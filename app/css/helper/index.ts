@@ -21,7 +21,7 @@ export const fillParent = css`
     width: 100%;
 `;
 
-const centerAbsolute = css`
+export const centerAbsolute = css`
     position: absolute;
     top: 50%;
     left: 50%;
