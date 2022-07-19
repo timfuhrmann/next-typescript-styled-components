@@ -38,7 +38,6 @@ export const transition = (
     transition-duration: ${durations.split(" ").join(",")};
     transition-timing-function: ${timingFunctions.split(" ").join(",")};
     transition-delay: ${delays.split(" ").join(",")};
-    will-change: ${properties.split(" ").join(",")};
 
     @media screen and (prefers-reduced-motion: reduce) {
         transition: none;
